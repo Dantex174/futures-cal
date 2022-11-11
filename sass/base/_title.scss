@@ -1,0 +1,57 @@
+.title {
+    &_header {
+        text-align: center;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 20px;
+        text-transform: uppercase;
+    }
+    &_sum {
+        font-size: 17px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &_enter, &_exit {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    &_sholder {
+        text-align: center;
+        font-size: 17px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    &_risk {
+        font-size: 15px;
+        font-weight: bold;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &_coin {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &_liquied {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &_profit {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &_stop-list {
+        font-size: 22px;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

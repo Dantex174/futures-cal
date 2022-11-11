@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FUTURES CALCULATOR</title>
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <section class="futures">
+        <div class="title title_header">Futures Calculator</div>
+        <div class="select">
+            <select required id="position" onchange="positions()">
+                <option value="long">Лонг</option>
+                <option value="short" selected="selected">Шорт</option>
+            </select>
+        </div>
+        <div class="container">
+            <div class="space-one">
+                <div class="space-one__sum">
+                    <div class="title title_sum">Сумма вложения ($) </div>
+                    <input type="number" size="5" id="deposit" onchange="deposit()">
+                </div>
+                <div class="space-one__dots">
+                    <div class="space-one__enter">
+                        <div class="title title_enter">Точка входа</div>
+                        <input type="number" size="5" id="in" onchange="inPoint()">
+                    </div>
+                    <div class="space-one__exit">
+                        <div class="title title_exit">Точка выхода</div>
+                        <input type="number" size="5" id="out" onchange="outPoint()">
+                    </div>
+                </div>
+                <div class="space-one__sholder">
+                    <div class="title title_sholder">Плечо</div>
+                    <div class="range">
+                        <input type="range" min="0" max="75" step="1" value="1" id="X">
+                        <div class="range__result" id="infoX">1</div>
+                    </div>
+                    <div class="btns">
+                        <button class="btn" id="minus">-</button>
+                        <button class="btn" id="plus">+</button>
+                    </div>
+                </div>
+                <button id="calculation" onclick="calculation()">Рассчитать</button>
+                <div class="risk">
+                    <div class="risk__proc">
+                        <div class="title title_risk">Риск (% от депозита)</div>
+                        <input type="number" id="riskProcent" onchange="risk(1)">
+                    </div>
+                    <div class="risk__doll">
+                        <div class="title title_risk">Риск ($ от депозита)</div>
+                        <input type="number" id="riskDollar" onchange="risk(0)">
+                    </div>
+            </div>
+            </div>
+            <div class="space-two">
+                <div class="space-two__coin">
+                    <div class="title title_coin">Количество монет</div>
+                    <textarea rows="1" cols="9" id="coinOut"></textarea>
+                </div>
+                <div class="space-two__profit">
+                    <div class="liquied">
+                        <div class="title title_liquied">Цена ликвидации</div>
+                        <textarea rows="1" cols="9" id="liquidationPrice"></textarea>
+                    </div>
+                    <div class="profit">
+                        <div class="title title_profit">Прибыль</div>
+                        <textarea rows="1" cols="9" id="profit"></textarea>
+                    </div>
+                    <div class="stop-list">
+                        <div class="title title_stop-list">S/L</div>
+                        <textarea rows="1" cols="9" id="SL"></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
